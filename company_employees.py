@@ -61,6 +61,12 @@ class Hospital:
 
     def get_employees(self):
         return print(f"{self.employees}")
+    
+    def fire_employee(self, employee):
+       for i, emp in enumerate(self.employees):
+           if emp == employee.name:
+               self.employees.pop(i)
+               return print(f"{employee.name} was fired from {self.name}") 
 
 h1 = Hospital('CopaStar')
 h2 = Hospital('Miguel Couto')
@@ -73,4 +79,6 @@ print(n1)
 h1.hire_employee(d1)
 h1.hire_employee(d2)
 print(d1.hospital)
+h1.get_employees()
+h1.fire_employee(d1)
 h1.get_employees()
